@@ -37,7 +37,12 @@ import { Task } from './interfaces/task.interface';
       <footer>
         <p>
           Make with ❤️ by
-          <a href="https://github.com/vanegasdiego">@vanegasdev</a>
+          <a href="https://github.com/DiegoVanegas03">vanegasdev</a>
+        </p>
+        <p>
+          <a href="propuesta-de-diseño.pdf" target="_blank" class="design-link"
+            >Ver Propuesta de Diseño</a
+          >
         </p>
       </footer>
     </div>
@@ -87,6 +92,14 @@ import { Task } from './interfaces/task.interface';
         font-size: 0.9rem;
         border-top: 1px solid #eee;
         padding-top: 1rem;
+      }
+      .design-link {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 0.85rem;
+      }
+      .design-link:hover {
+        text-decoration: underline;
       }
     `,
   ],
