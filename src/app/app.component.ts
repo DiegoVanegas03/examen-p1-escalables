@@ -40,7 +40,7 @@ import { Task } from './interfaces/task.interface';
           <a href="https://github.com/DiegoVanegas03">vanegasdev</a>
         </p>
         <p>
-          <a href="propuesta-de-diseño.pdf" target="_blank" class="design-link"
+          <a href="propuesta-de-diseno.pdf" target="_blank" class="design-link"
             >Ver Propuesta de Diseño</a
           >
         </p>
