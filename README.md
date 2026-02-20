@@ -1,27 +1,61 @@
-# ExamenP1
+# Task Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.20.
+Este proyecto es una pequeña aplicación para gestionar tareas, construida con Angular.
 
-## Development server
+## Objetivo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Construir una app para gestionar tareas demostrando el uso de Signals, Control Flow y comunicación entre componentes.
 
-## Code scaffolding
+## Requerimientos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1️⃣ Mostrar tareas
 
-## Build
+- Usar `@for` y `track`.
+- Las tareas deben venir de un `TaskService`.
+- El estado debe estar manejado con **Signals**.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 2️⃣ Agregar tarea
 
-## Running unit tests
+- Crear un `TaskFormComponent` con:
+  - **Reactive Forms**.
+  - Validación requerida para el título.
+  - Select para prioridad (Alta, Media, Baja).
+  - Checkbox para completado.
+  - Mensaje de error si el título está vacío.
+  - Emitir evento al padre (`Task` added).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3️⃣ Controles
 
-## Running end-to-end tests
+- Crear `TaskControlsComponent` con botones:
+  - "Show All" (Todas)
+  - "Show Completed" (Completadas)
+  - "Show Pending" (Pendientes)
+- Debe comunicarse de hijo → padre para filtrar la lista.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 4️⃣ CSS condicional obligatorio
 
-## Further help
+- Tareas completadas se ven tachadas.
+- Prioridad **High** (Alta) se ve en rojo.
+- Prioridad **Medium** (Media) se ve en naranja.
+- Prioridad **Low** (Baja) se ve en verde.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Estructura
+
+- `TaskService`
+- `TaskFormComponent`
+- `TaskControlsComponent`
+- `TaskCardComponent`
+
+## Interfaz
+
+```typescript
+export interface Task {
+  title: string;
+  priority: "Low" | "Medium" | "High";
+  completed: Boolean;
+}
+```
+
+## Desarrollado por
+
+Hecho con ❤️ por [@vanegasdev](https://github.com/vanegasdiego)
